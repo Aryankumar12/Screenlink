@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
+
 import { auth } from "./firebase/config";
 import Auth from "./components/Auth";
 import ScreenRecorder from "./components/ScreenRecorder";
@@ -104,6 +106,7 @@ export default function RootApp() {
   return (
     <Router>
       <App />
+       <Analytics />
     </Router>
   );
 }
