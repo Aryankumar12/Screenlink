@@ -1,8 +1,11 @@
 #!/bin/bash
 
+#!/bin/bash
+
 cd ~/screenlink
 
-echo "Auto update on $(date)" >> activity_log.txt
+echo "Log at $(date) - update $RANDOM" >> activity_log.txt
 git add .
-git commit -m "Automated update on $(date)"
+git commit -m "Automated update at $(date)"
 git push origin main
+
